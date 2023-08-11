@@ -30,6 +30,12 @@ public class SqlConnection {
                 .addScript("./STUDENT.sql")
                 .addScript("./PAYMENTTYPE.sql")
                 .addScript("./PAYMENT.sql")
+
+                .addScript("./SOLUTION.sql")
                 .build();
+    }
+
+    public static void main(String[] args) {
+        SqlConnection.getDataSource();
     }
 }

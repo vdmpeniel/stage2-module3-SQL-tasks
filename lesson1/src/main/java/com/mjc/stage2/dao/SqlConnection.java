@@ -29,4 +29,8 @@ public class SqlConnection {
                 .addScript("./SOLUTION.sql")
                 .build();
     }
+
+    public static void main(String[] args) {
+        SqlConnection.getDataSource();
+    }
 }

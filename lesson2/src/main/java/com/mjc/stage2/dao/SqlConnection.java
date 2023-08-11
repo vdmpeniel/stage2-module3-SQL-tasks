@@ -27,6 +27,12 @@ public class SqlConnection {
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
                 .addScript("./CREATE.sql")
+
+                .addScript("./SOLUTION.sql")
                 .build();
+    }
+
+    public static void main(String[] args) {
+        SqlConnection.getDataSource();
     }
 }

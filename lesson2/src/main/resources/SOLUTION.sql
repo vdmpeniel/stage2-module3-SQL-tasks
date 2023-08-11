@@ -4,7 +4,7 @@
 INSERT INTO Student(
     name,
     birthday,
-    group_number
+    groupnumber
 )
 VALUES
     ('John', '2018-02-21', 1),
@@ -16,7 +16,7 @@ VALUES
 INSERT INTO Student(
     name,
     birthday,
-    group_number
+    groupnumber
 )
 VALUES
     ('Oliver', '2018-02-21', 2),
@@ -29,7 +29,7 @@ VALUES
 INSERT INTO Student(
     name,
     birthday,
-    group_number
+    groupnumber
 )
 VALUES
     ('Jacob', '2018-02-21', 3),
@@ -40,7 +40,7 @@ VALUES
 INSERT INTO Student(
     name,
     birthday,
-    group_number
+    groupnumber
 )
 VALUES
     ('William', '2018-02-21', 4),
@@ -74,7 +74,7 @@ VALUES
 
 
 -- 3) Insert “DAILY”, “WEEKLY”, ”MONTHLY” Payment Types.
-INSERT INTO PaymentType(id, name)
+INSERT INTO PaymentType(name)
 VALUES
 ('DAILY'),
 ('WEEKLY'),
@@ -102,13 +102,6 @@ VALUES
 
 
 -- 5) Insert 5 Marks:
-- 8 for Chris by Art;
-- 5 for Oliver by History;
-- 9 for James by Geography;
-- 4 for Jacob by Math;
-- 9 for Logan by PE.
-- Insert more Masks for students.
-
 INSERT INTO Mark(
     student_id,
     subject_id,

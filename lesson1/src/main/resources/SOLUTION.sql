@@ -1,11 +1,11 @@
-#CREATE DATABASE University;
+--CREATE DATABASE University;
 
 CREATE TABLE Student
 (
     id bigint NOT NULL UNIQUE AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     birthday date,
-    group_number int NOT NULL,
+    groupnumber int NOT NULL,
     PRIMARY KEY (id)
 );
 
