@@ -26,11 +26,11 @@ public class SqlConnection {
     private static DataSource getDataSource() {
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
-                .addScript("./SOLUTION.sql")
+//                .addScript("./SOLUTION.sql")
                 .build();
     }
 
-    public static void main(String[] args) {
-        SqlConnection.getDataSource();
-    }
+//    public static void main(String[] args) {
+//        SqlConnection.getDataSource();
+//    }
 }

@@ -33,6 +33,11 @@ public class SqlConnection {
                 .addScript("./SUBJECT.sql")
                 .addScript("./MARK.sql")
                 .addScript("./TABLES_CHANGES.sql")
+
+//                .addScript("./SOLUTION.sql")
                 .build();
     }
+//    public static void main(String[] args) {
+//        SqlConnection.getDataSource();
+//    }
 }

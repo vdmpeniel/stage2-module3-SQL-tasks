@@ -28,11 +28,11 @@ public class SqlConnection {
                 .setType(EmbeddedDatabaseType.H2)
                 .addScript("./CREATE.sql")
 
-                .addScript("./SOLUTION.sql")
+//                .addScript("./SOLUTION.sql")
                 .build();
     }
 
-    public static void main(String[] args) {
-        SqlConnection.getDataSource();
-    }
+//    public static void main(String[] args) {
+//        SqlConnection.getDataSource();
+//    }
 }

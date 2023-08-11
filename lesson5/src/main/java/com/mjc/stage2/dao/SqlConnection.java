@@ -31,11 +31,11 @@ public class SqlConnection {
                 .addScript("./PAYMENTTYPE.sql")
                 .addScript("./PAYMENT.sql")
 
-                .addScript("./SOLUTION.sql")
+//                .addScript("./SOLUTION.sql")
                 .build();
     }
 
-    public static void main(String[] args) {
-        SqlConnection.getDataSource();
-    }
+//    public static void main(String[] args) {
+//        SqlConnection.getDataSource();
+//    }
 }
