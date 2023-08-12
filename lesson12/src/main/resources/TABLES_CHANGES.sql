@@ -1,3 +1,3 @@
-ALTER TABLE Payment (ADD CONSTRAINT fk_payment_student FOREIGN KEY (student_id) REFERENCES Student(id) ON DELETE CASCADE);
-ALTER TABLE Mark (ADD CONSTRAINT fk_mark_student FOREIGN KEY (student_id) REFERENCES Student(id) ON DELETE CASCADE);
-ALTER TABLE Payment (ADD CONSTRAINT fk_payment_type FOREIGN KEY (type_id) REFERENCES PaymentType(id) ON DELETE CASCADE);
+ALTER TABLE Payment ADD CONSTRAINT fk_payment_student FOREIGN KEY (student_id) REFERENCES Student(id) ON DELETE CASCADE;
+ALTER TABLE Mark ADD CONSTRAINT fk_mark_student FOREIGN KEY (student_id) REFERENCES Student(id) ON DELETE CASCADE;
+ALTER TABLE Payment ADD CONSTRAINT fk_payment_type FOREIGN KEY (type_id) REFERENCES PaymentType(id) ON DELETE CASCADE;
