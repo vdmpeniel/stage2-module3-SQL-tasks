@@ -1,8 +1,8 @@
 SET REFERENTIAL_INTEGRITY FALSE;
 BEGIN TRANSACTION;
-DELETE FROM Student WHERE id IN ( SELECT DISTINCT student_id FROM mark WHERE mark >= 4 );
-DELETE FROM Payment WHERE student_id IN ( SELECT DISTINCT student_id FROM mark WHERE mark >= 4 );
-DELETE FROM Mark WHERE mark >= 4;
+DELETE FROM Payment WHERE student_id IN ( SELECT DISTINCT id FROM Student WHERE groupnumber >= 4 );
+DELETE FROM Mark WHERE student_id IN ( SELECT DISTINCT id FROM Student WHERE groupnumber >= 4 );
+DELETE FROM Student WHERE groupnumber >= 4;
 COMMIT;
 SET REFERENTIAL_INTEGRITY TRUE;
 
