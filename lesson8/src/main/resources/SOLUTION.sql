@@ -1,4 +1,4 @@
-SELECT MIN(DATEDIFF('YEAR', birthday, CURRENT_DATE)) FROM Student;
+SELECT MAX(birthday) FROM Student;
 
 SELECT MIN(payment_date) FROM Payment;
 
