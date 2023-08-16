@@ -1,11 +1,44 @@
-CREATE TABLE Student( id bigint NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT NULL, birthday date, groupnumber int NOT NULL );
+CREATE TABLE Student(
+    id BIGINT NOT NULL UNIQUE AUTO_INCREMENT,
+    name VARCHAR NOT NULL,
+    birthday DATE NOT NULL,
+    groupnumber INT NOT NULL,
+    PRIMARY KEY( id )
+);
 
-CREATE TABLE Subject( id bigint NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT NULL, description varchar(255), grade int );
+CREATE TABLE Subject(
+    id BIGINT NOT NULL UNIQUE AUTO_INCREMENT,
+    name VARCHAR NOT NULL,
+    description VARCHAR,
+    grade INT,
+    PRIMARY KEY( id )
+);
 
-CREATE TABLE PaymentType( id bigint NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY, name varchar(255) );
+CREATE TABLE PaymentType(
+    id BIGINT NOT NULL UNIQUE AUTO_INCREMENT,
+    name VARCHAR,
+     PRIMARY KEY ( id )
+);
 
-CREATE TABLE Payment( id bigint NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY, type_id bigint, amount decimal, student_id bigint NOT NULL, payment_date datetime, FOREIGN KEY (student_id) REFERENCES Student (id), FOREIGN KEY (type_id) REFERENCES PaymentType (id) );
+CREATE TABLE Payment(
+    id BIGINT NOT NULL UNIQUE AUTO_INCREMENT,
+    type_id BIGINT,
+    amount DECIMAL,
+    student_id BIGINT NOT NULL,
+    payment_date DATETIME,
+    PRIMARY KEY ( id )
+);
+ALTER TABLE Payment ADD CONSTRAINT fk_payment_type FOREIGN KEY (type_id) REFERENCES PaymentType(id);
+ALTER TABLE Payment ADD CONSTRAINT fk_payment_student FOREIGN KEY (student_id) REFERENCES Student(id);
 
-CREATE TABLE Mark( id bigint NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY, student_id bigint, subject_id bigint, mark int  NOT NULL, FOREIGN KEY (student_id) REFERENCES Student (id), FOREIGN KEY (subject_id) REFERENCES Subject (id) );
+CREATE TABLE Mark(
+    id BIGINT NOT NULL UNIQUE AUTO_INCREMENT,
+    student_id BIGINT,
+    subject_id BIGINT,
+    mark INT NOT NULL,
+    PRIMARY KEY ( id )
+);
+ALTER TABLE Mark ADD CONSTRAINT fk_mark_student FOREIGN KEY (student_id) REFERENCES Student(id);
+ALTER TABLE Mark ADD CONSTRAINT fk_mark_subject FOREIGN KEY (subject_id) REFERENCES Subject(id);
 
 
